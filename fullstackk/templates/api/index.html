@@ -12,27 +12,17 @@
     <div class="container">
         <h1>{{ users_list }} </h1>
         {% if listt %}
-            <div class="table_div">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>First Name:</th>
-                            <th>Last Name:</th>
-                            <th>Email:</th>
-                        </tr>
-                    </thead>
+        <ol>
+        {% for f in listt %}
+            <li>User Info </li>
+            <ul>
+                <li>{{f.first_name}}</li>
+                <li>{{f.last_name}}</li>
+                <li>{{f.email}}</li>
+            </ul>
 
-                    <!-- <tbody> -->
-                        {% for f in listt %}
-                        <tr>
-                            <td>{{ f.first_name }}</td>
-                            <td>{{ f.last_name }}</td>
-                            <td>{{ f.email }}</td>
-                        </tr>
-                        {% endfor %}
-                    <!-- </tbody> -->
-                </table>
-            </div>
+        {% endfor %}
+    </ol>
         {% endif %}
     </div>
 

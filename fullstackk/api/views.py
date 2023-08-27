@@ -10,3 +10,10 @@ def display(request):
     }
 
     return render(request, "api/index.html", context)
+
+
+def display_copy(request):
+    listt = User.objects.all()
+    context = {}
+
+    return render(request, "api/index_copy.html", context)
