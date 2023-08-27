@@ -1,0 +1,13 @@
+/* .table_div{
+    background-color:black;
+    border: 2px solid black; 
+    color: white;
+    
+} 
+*/
+ 
+table, th, td {
+    border: 2px solid rgb(210, 52, 52);
+    width: 60%;
+
+}
