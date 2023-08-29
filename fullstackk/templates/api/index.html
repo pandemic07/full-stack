@@ -10,21 +10,14 @@
 </head>
 <body>
     <div class="container">
-        <h1>{{ users_list }} </h1>
-        {% if listt %}
-        <ol>
-        {% for f in listt %}
-            <li>User Info </li>
-            <ul>
-                <li>{{f.first_name}}</li>
-                <li>{{f.last_name}}</li>
-                <li>{{f.email}}</li>
-            </ul>
-
-        {% endfor %}
-    </ol>
-        {% endif %}
+        <div class="jumbotron">
+            <form method="POST">
+                {{ form.as_p}}
+                {% csrf_token %}
+                <input type="submit" name="" id="" value="Submit">
+            </form>
+        </div>
     </div>
-
+    
 </body>
 </html>
